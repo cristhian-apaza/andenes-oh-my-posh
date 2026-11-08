@@ -1,0 +1,133 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": false,
+      "segments": [
+        {
+          "type": "os",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#7E9CD8",
+          "background": "#2D4F67",
+          "template": " {{ .Icon }} "
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#7FB4CA",
+          "background": "#223249",
+          "template": "{{ if hasPrefix `~` .PWD }} \uF015 {{ end }}"
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#98BB6C",
+          "template": "{{ $p := .PWD | replace `\\` `/` | splitList `/` | compact }}{{ if and $p (eq (first $p) `~`) }}{{ $p = rest $p }}{{ end }}{{ if ge (len $p) 3 }} … {{ end }}"
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#76946A",
+          "template": "{{ $p := .PWD | replace `\\` `/` | splitList `/` | compact }}{{ if and $p (eq (first $p) `~`) }}{{ $p = rest $p }}{{ end }}{{ if ge (len $p) 2 }} {{ index $p (sub (len $p) 2) }} {{ end }}"
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#DCD7BA",
+          "background": "#4E6B44",
+          "template": "{{ $p := .PWD | replace `\\` `/` | splitList `/` | compact }}{{ if and $p (eq (first $p) `~`) }}{{ $p = rest $p }}{{ end }}{{ if $p }} <b>{{ last $p }}</b> {{ end }}"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\u2800"
+        },
+        {
+          "type": "node",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#C0A36E",
+          "template": " \uE718 {{ .Full }} ",
+          "options": { "display_mode": "context" }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#E6C384",
+          "template": " \uE73C {{ .Full }} ",
+          "options": { "display_mode": "context" }
+        },
+        {
+          "type": "php",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#7E9CD8",
+          "template": " \uE73D {{ .Full }} ",
+          "options": { "display_mode": "context" }
+        },
+        {
+          "type": "java",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#D27E99",
+          "template": " \uE738 {{ .Full }} ",
+          "options": { "display_mode": "context" }
+        },
+        {
+          "type": "dotnet",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#7FB4CA",
+          "template": " \uDB82\uDEAE {{ .Full }} ",
+          "options": { "display_mode": "context" }
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#FFA066",
+          "template": "{{ if or .Env.POSH_SQL (glob `*.sql`) }} \uF1C0 SQL {{ end }}"
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#1F1F28",
+          "background": "#957FB8",
+          "template": " {{ .HEAD }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#7E9CD8",
+          "template": "❯ "
+        }
+      ]
+    }
+  ]
+}
