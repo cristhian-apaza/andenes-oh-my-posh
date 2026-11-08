@@ -102,7 +102,7 @@ anything listed in `.gitignore`. Results are cached per folder.
 
 ## License
 
-[MIT](LICENSE) © Cristhian
+[MIT](LICENSE) © Cristhian J. Apaza Arhuata
 
 ---
 
