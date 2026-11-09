@@ -6,7 +6,7 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": false,
+      "newline": true,
       "segments": [
         {
           "type": "os",
@@ -60,7 +60,9 @@
           "foreground": "#1F1F28",
           "background": "#C0A36E",
           "template": " \uE718 {{ .Full }} ",
-          "options": { "display_mode": "context" }
+          "options": {
+            "display_mode": "context"
+          }
         },
         {
           "type": "python",
@@ -69,7 +71,9 @@
           "foreground": "#1F1F28",
           "background": "#E6C384",
           "template": " \uE73C {{ .Full }} ",
-          "options": { "display_mode": "context" }
+          "options": {
+            "display_mode": "context"
+          }
         },
         {
           "type": "php",
@@ -78,7 +82,9 @@
           "foreground": "#1F1F28",
           "background": "#7E9CD8",
           "template": " \uE73D {{ .Full }} ",
-          "options": { "display_mode": "context" }
+          "options": {
+            "display_mode": "context"
+          }
         },
         {
           "type": "java",
@@ -87,7 +93,9 @@
           "foreground": "#1F1F28",
           "background": "#D27E99",
           "template": " \uE738 {{ .Full }} ",
-          "options": { "display_mode": "context" }
+          "options": {
+            "display_mode": "context"
+          }
         },
         {
           "type": "dotnet",
@@ -96,7 +104,9 @@
           "foreground": "#1F1F28",
           "background": "#7FB4CA",
           "template": " \uDB82\uDEAE {{ .Full }} ",
-          "options": { "display_mode": "context" }
+          "options": {
+            "display_mode": "context"
+          }
         },
         {
           "type": "text",
